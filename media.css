@@ -1,0 +1,14 @@
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+    
+  .content .image {
+    width: 700px;
+    height: auto;
+  }
+}

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-/* @import 'media.css'; */
 
 * {
   margin: 0;
@@ -193,8 +192,9 @@ section {
   .info {
     margin-left: 30px;
   }
-  .info p {
-    width: 350px;
+  .info p,
+  .content .text-box p {
+    max-width: 350px;
   }
 }
 
@@ -212,6 +212,10 @@ section {
     font-size: 2.5em;
     margin-bottom: 60px;
   }
+
+  .sec-03 {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -221,25 +225,18 @@ section {
   }
 
   .content .text-box {
+    margin-left: 10px;
+    background: rgba(12, 7, 7, 0.5);
     padding: 40px;
     max-width: 600px;
-    height: 400px;
-    left: 900px;
-    transform: translate(-300px, 10px);
-  }
-
-  .content .text-box p {
-    max-width: 350px;
+    transform: translate(-250px, 50px);
   }
 
   .content .info {
     margin-left: 10px;
     background: rgba(12, 7, 7, 0.5);
-    backdrop-filter: blur(20px);
     padding: 40px;
     max-width: 600px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
     transform: translate(-250px, 50px);
   }
 
@@ -305,6 +302,10 @@ section {
 }
 
 @media (max-width: 500px) {
+  .content .text-box {
+    margin-left: -26px;
+  }
+
   .main-title {
     font-size: 1.7em;
     margin-bottom: 20px;
@@ -343,19 +344,48 @@ section {
 }
 
 @media (max-width: 400px) {
-  .content .text-box {
-    padding: 5px;
-    max-width: 350px;
-    transform: translate(-350px, 20px);
-  }
-  .content .text-box p {
-    max-width: 320px;
-  }
-  .content .info {
-    padding: 5px;
-    max-width: 350px;
-    transform: translate(-350px, 20px);
+  .content:nth-child(1),
+  content:nth-child(2) {
+    width: 100%;
   }
 
+  .content .text-box {
+    padding: 5px;
+    transform: translate(-330px, 5px);
+    width: 320px;
+  }
+
+  .sec-03,
+  .sec-02,
+  .sec-01 {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .info p,
+  .content .text-box p {
+    max-width: 250px;
+  }
+
+  .content .text-box {
+    padding: 5px;
+    transform: translate(-340px, 5px);
+    width: 260px;
+  }
+
+  .content .info {
+    width: 280px;
+    margin-left: -36px;
+  }
+
+  .content .text-box h3 {
+    display: none;
+  }
 
 }

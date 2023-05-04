@@ -9,9 +9,19 @@ ScrollReveal().reveal('.main-title, .section-title', {
   delay: 500,
   origin: 'left',
 })
-ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' })
+ScrollReveal().reveal('.sec-01 .image', { delay: 600, origin: 'bottom' })
 
-ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' })
+const smallDevice = window.matchMedia('(min-width: 361px)')
+
+function handleDeviceChange(e) {
+  if (e.matches) {
+    ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' })
+    ScrollReveal().reveal(' .info', { delay: 600, origin: 'bottom' })
+  }
+}
+
+handleDeviceChange(smallDevice)
+
 ScrollReveal().reveal('.media-icons i', {
   delay: 500,
   origin: 'bottom',

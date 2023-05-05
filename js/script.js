@@ -22,6 +22,16 @@ function handleDeviceChange(e) {
 
 handleDeviceChange(smallDevice)
 
+const titleChange = window.matchMedia('(max-width: 360px)')
+function titleChangFun(e) {
+  if (e.matches) {
+    let title2 = document.querySelector('.main-title')
+    title2.innerHTML = 'Modern Art <br> Photography'
+  }
+}
+
+titleChangFun(titleChange)
+
 ScrollReveal().reveal('.media-icons i', {
   delay: 500,
   origin: 'bottom',
